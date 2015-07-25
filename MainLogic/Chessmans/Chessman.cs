@@ -1,4 +1,4 @@
-﻿using MainLogic.Checker;
+﻿using MainLogic.CheckerLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,9 @@ namespace MainLogic.Chessmans
     public abstract class Chessman
     {
         public ChessmanColor ChessmanColor { get; set; }
-        public CheckerPoint CheckerPoint { get; set; }
+        public CheckerPoint Field { get; set; }
 
+        public abstract void Move(CheckerLogic.Checker checker, CheckerPoint point);
         public abstract string GetSymbol();
     }
 }

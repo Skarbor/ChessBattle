@@ -1,4 +1,4 @@
-﻿using MainLogic.Checker;
+﻿using MainLogic.CheckerLogic;
 using MainLogic.Chessmans;
 using System;
 using System.Collections.Generic;

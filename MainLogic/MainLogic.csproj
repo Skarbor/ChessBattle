@@ -39,18 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checker\Checker.cs" />
-    <Compile Include="Checker\CheckerPoint.cs" />
+    <Compile Include="CheckerLogic\Checker.cs" />
+    <Compile Include="CheckerLogic\CheckerPoint.cs" />
     <Compile Include="Chessmans\Bishop.cs" />
     <Compile Include="Chessmans\Chessman.cs" />
     <Compile Include="Chessmans\ChessmanColor.cs" />
     <Compile Include="Chessmans\ChessmanType.cs" />
-    <Compile Include="Checker\MoveRequirements.cs" />
+    <Compile Include="Chessmans\MoveRequirements.cs" />
     <Compile Include="Chessmans\Hetman.cs" />
     <Compile Include="Chessmans\Jumper.cs" />
     <Compile Include="Chessmans\King.cs" />
     <Compile Include="Chessmans\Pawn.cs" />
     <Compile Include="Chessmans\Tower.cs" />
+    <Compile Include="GameLogic\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

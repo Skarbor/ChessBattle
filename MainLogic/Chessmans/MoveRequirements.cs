@@ -1,14 +1,15 @@
-﻿using System;
+﻿using MainLogic.CheckerLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MainLogic.Checker
+namespace MainLogic.Chessmans
 {
     public static class MoveRequirements
     {
-        public static Boolean TowerMovement(CheckerPoint start, CheckerPoint end)
+        public static Boolean CheckTowerMovement(CheckerPoint start, CheckerPoint end)
         {
             if (start.X == end.X) return true;
 
@@ -17,7 +18,7 @@ namespace MainLogic.Checker
             return false;
         }
 
-        public static Boolean JumperMovement(CheckerPoint start, CheckerPoint end)
+        public static Boolean CheckJumperMovement(CheckerPoint start, CheckerPoint end)
         {
             if (end.X == start.X + 2 && (end.Y == start.Y + 1 || end.Y == start.Y - 1)) return true;    //left and up, left and down
             if (end.X == start.X - 2 && (end.Y == start.Y + 1 || end.Y == start.Y - 1)) return true;    //right and up, right and down
@@ -27,7 +28,7 @@ namespace MainLogic.Checker
             return false;
         }
 
-        public static Boolean BishopMovement(CheckerPoint start, CheckerPoint end)
+        public static Boolean CheckBishopMovement(CheckerPoint start, CheckerPoint end)
         {
             int x_move = end.X - start.X;
             int y_move = end.X - start.X;
@@ -39,12 +40,12 @@ namespace MainLogic.Checker
             else return false;
         }
 
-        public static Boolean HetmanMovement(CheckerPoint start, CheckerPoint end)
+        public static Boolean CheckHetmanMovement(CheckerPoint start, CheckerPoint end)
         {
             //Hetman's movement is tower + bishop movement
-            
-            if (TowerMovement(start, end)) return true;
-            if (BishopMovement(start, end)) return true;
+
+            if (CheckTowerMovement(start, end)) return true;
+            if (CheckBishopMovement(start, end)) return true;
 
             return false;
         }
