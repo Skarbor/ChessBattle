@@ -3,9 +3,7 @@ CheesBattle.v12.suo
 *.pdb
 *.cache
 *.exe
-*.manifest
 MainLogic/obj/
 CheesBattleConsoleTest/bin/
 CheesBattleConsoleTest/obj/
-/MainLogic/bin/
 MainLogic/bin/
