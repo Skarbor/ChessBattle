@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainLogic.GameLogic
 {
-    public class Game
+    class GameState
     {
-        //Klasa odpowiedzialna za zarządzanie rozgrywką, 
-        //Przechowuje stan gry, zarządza poleceniami od graczy 
     }
 }
